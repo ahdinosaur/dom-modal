@@ -1,11 +1,15 @@
-# dom-modal
+# dom-modal [![Dependency Status](http://img.shields.io/david/vvo/dom-modal.svg?style=flat-square)](https://david-dm.org/vvo/dom-modal) [![devDependency Status](http://img.shields.io/david/dev/vvo/dom-modal.svg?style=flat-square)](https://david-dm.org/vvo/dom-modal#info=devDependencies)
 
 Standalone modal for the browser.
 
+- easy to style
 - with overlay
+- overlay click = close modal
 - all-in-one JavaScript file
 - ~2.5kb minified gzipped
 - should work™ on IE9+
+
+![screenshot](screenshot.png)
 
 ```shell
 npm install dom-modal --save
