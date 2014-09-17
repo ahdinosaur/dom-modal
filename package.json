@@ -1,0 +1,40 @@
+{
+  "name": "dom-modal",
+  "version": "1.0.0",
+  "description": "Standalone modal for the browser, with overlay",
+  "main": "index.js",
+  "scripts": {
+    "test": "prova test.js -b -l phantom -q",
+    "example": "http-server . & watchify -dv -r ./index.js:dom-modal -o build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vvo/dom-modal.git"
+  },
+  "author": "Vincent Voyer <vincent@zeroload.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vvo/dom-modal/issues"
+  },
+  "homepage": "https://github.com/vvo/dom-modal",
+  "dependencies": {
+    "brfs": "^1.2.0",
+    "component-bind": "^1.0.0",
+    "component-emitter": "^1.1.3",
+    "dom-event": "0.0.0",
+    "dom-style": "0.0.3",
+    "domify": "^1.3.0",
+    "insert-css": "^0.2.0",
+    "once-component": "0.0.1"
+  },
+  "devDependencies": {
+    "http-server": "^0.7.1",
+    "prova": "^1.14.2",
+    "watchify": "^1.0.2"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  }
+}
