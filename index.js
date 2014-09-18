@@ -32,7 +32,7 @@ Modal.prototype.show = function() {
   this.emit('show');
 }
 
-Modal.prototype.hide = function(askedByOverlay) {
+Modal.prototype.hide = function() {
   overlay.off('hide', this.hideOverlayListener);
   overlay.hide();
   style(this.container, 'display', 'none');

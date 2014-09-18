@@ -4,7 +4,8 @@ Standalone modal for the browser.
 
 - easy to style
 - with overlay
-- overlay click = close modal
+- overlay click = close
+- esc key = close
 - all-in-one JavaScript file
 - ~2.5kb minified gzipped
 - should work™ on IE9+
