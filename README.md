@@ -8,6 +8,7 @@ Standalone modal for the browser.
 - all-in-one JavaScript file
 - ~2.5kb minified gzipped
 - should work™ on IE9+
+- based on modules from [npm-dom](https://github.com/npm-dom)
 
 ![screenshot](screenshot.png)
 

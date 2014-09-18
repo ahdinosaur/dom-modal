@@ -8,8 +8,8 @@ var bind = require('component-bind');
 
 var overlay = require('./overlay.js');
 
-var css = fs.readFileSync('./modal.css', 'utf8');
-var html = fs.readFileSync('./modal.html', 'utf8');
+var css = fs.readFileSync(__dirname + '/modal.css', 'utf8');
+var html = fs.readFileSync(__dirname + '/modal.html', 'utf8');
 var addStyle = once(bind(null, insertCss, css, { prepend: true }));
 
 module.exports = function modal(element) {

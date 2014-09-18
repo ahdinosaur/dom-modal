@@ -7,8 +7,8 @@ var Emitter = require('component-emitter');
 var insertCss = require('insert-css');
 var bind = require('component-bind');
 
-var css = fs.readFileSync('./overlay.css', 'utf8');
-var html = fs.readFileSync('./overlay.html', 'utf8');
+var css = fs.readFileSync(__dirname + '/overlay.css', 'utf8');
+var html = fs.readFileSync(__dirname + '/overlay.html', 'utf8');
 var on = require('dom-event');
 
 function Overlay() {
