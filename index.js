@@ -19,7 +19,7 @@ module.exports = function modal(element) {
 function Modal(element) {
   this.container = domify(html);
   this.container.appendChild(element);
-  this.hideOverlayListener = bind(this, this.hide);
+  this.hideOverlayListener = bind(this, this.hide, true);
 }
 
 Emitter(Modal.prototype);
@@ -32,9 +32,13 @@ Modal.prototype.show = function() {
   this.emit('show');
 }
 
-Modal.prototype.hide = function() {
+Modal.prototype.hide = function(askedByOverlay) {
   overlay.off('hide', this.hideOverlayListener);
-  overlay.hide();
+
+  if (askedByOverlay !== true) {
+    overlay.hide();
+  }
+
   style(this.container, 'display', 'none');
   this.emit('hide');
 }
