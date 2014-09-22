@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "http-server": "^0.7.1",
+    "phantomjs": "^1.9.9",
     "prova": "^1.14.2",
     "watchify": "^1.0.2"
   },
