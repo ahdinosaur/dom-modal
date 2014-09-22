@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:vvo/dom-modal.git"
+    "url": "git@github.com:ThankYouMotion/dom-modal.git"
   },
   "author": "Vincent Voyer <vincent@zeroload.net>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vvo/dom-modal/issues"
+    "url": "https://github.com/ThankYouMotion/dom-modal/issues"
   },
-  "homepage": "https://github.com/vvo/dom-modal",
+  "homepage": "https://github.com/ThankYouMotion/dom-modal",
   "dependencies": {
     "brfs": "^1.2.0",
     "component-bind": "^1.0.0",

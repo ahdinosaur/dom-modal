@@ -1,4 +1,4 @@
-# dom-modal [![Dependency Status](http://img.shields.io/david/vvo/dom-modal.svg?style=flat-square)](https://david-dm.org/vvo/dom-modal) [![devDependency Status](http://img.shields.io/david/dev/vvo/dom-modal.svg?style=flat-square)](https://david-dm.org/vvo/dom-modal#info=devDependencies)
+# dom-modal [![Dependency Status](http://img.shields.io/david/ThankYouMotion/dom-modal.svg?style=flat-square)](https://david-dm.org/ThankYouMotion/dom-modal) [![devDependency Status](http://img.shields.io/david/dev/ThankYouMotion/dom-modal.svg?style=flat-square)](https://david-dm.org/ThankYouMotion/dom-modal#info=devDependencies)
 
 Standalone modal for the browser.
 
