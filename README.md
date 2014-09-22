@@ -61,4 +61,6 @@ npm run build
 
 # credits
 
-CSS technique by [Sara Soueidan](https://twitter.com/SaraSoueidan) for http://tympanus.net/codrops/2013/11/07/css-overlay-techniques/.
+CSS techniques by:
+- [Sara Soueidan](https://twitter.com/SaraSoueidan): http://tympanus.net/codrops/2013/11/07/css-overlay-techniques/
+- [Scott O'Hara](https://twitter.com/scottohara): http://www.smashingmagazine.com/2014/09/15/making-modal-windows-better-for-everyone/
