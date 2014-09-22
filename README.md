@@ -17,7 +17,7 @@ Standalone modal for the browser.
 npm install dom-modal --save
 ```
 
-# usage
+## usage
 
 ```js
 var modal = require('dom-modal');
@@ -33,13 +33,13 @@ myModal.on('show', console.log);
 myModal.on('hide', console.log);
 ```
 
-# test
+## test
 
 ```
 npm test
 ```
 
-# example
+## example
 
 ```
 npm run example
@@ -47,19 +47,13 @@ npm run example
 
 Then open http://0.0.0.0:8080/example.html in a browser.
 
-# styling
+## styling
 
 See the css files: [overlay.css](overlay.css), [modal.css](modal.css).
 
 Just overwrite the styles you want.
 
-# build
-
-```shell
-npm run build
-```
-
-# credits
+## credits
 
 CSS techniques by:
 - [Sara Soueidan](https://twitter.com/SaraSoueidan): http://tympanus.net/codrops/2013/11/07/css-overlay-techniques/
