@@ -22,13 +22,17 @@ Emitter(Overlay.prototype);
 Overlay.prototype.show = function() {
   on(document, 'keydown', this.escKeyListener);
   this.setup();
-  style(this.container, 'display', 'block');
+  style(this.container, 'visibility', 'visible');
   this.emit('show');
 }
 
-Overlay.prototype.hide = function() {
+Overlay.prototype.hide = function(e) {
+  if (e !== undefined && e.target !== this.container) {
+    return;
+  }
+
   on.off(document, 'keydown', this.escKeyListener);
-  style(this.container, 'display', 'none');
+  style(this.container, 'visibility', 'hidden');
   this.emit('hide');
 }
 

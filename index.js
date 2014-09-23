@@ -19,6 +19,7 @@ module.exports = function modal(element) {
 function Modal(element) {
   this.container = domify(html);
   this.container.appendChild(element);
+  overlay.container.appendChild(this.container);
   this.hideOverlayListener = bind(this, this.hide, true);
 }
 
@@ -45,5 +46,4 @@ Modal.prototype.hide = function(askedByOverlay) {
 
 Modal.prototype.setup = once(function() {
   addStyle();
-  document.body.appendChild(this.container);
 });

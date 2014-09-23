@@ -1,11 +1,10 @@
 .dom-modal-modal {
   display:none;
 
-  background-color: #ffffff;
+  background: #ffffff;
   margin: auto;
   overflow: auto;
   overflow-x: hidden;
   position: relative;
   width: 100%;
-  z-index: 3;
 }
