@@ -4,13 +4,12 @@ var once = require('once-component');
 var style = require('dom-style');
 var Emitter = require('component-emitter');
 var insertCss = require('insert-css');
-var bind = require('component-bind');
 
 var overlay = require('./overlay.js');
 
 var css = fs.readFileSync(__dirname + '/modal.css', 'utf8');
 var html = fs.readFileSync(__dirname + '/modal.html', 'utf8');
-var addStyle = once(bind(null, insertCss, css, { prepend: true }));
+var addStyle = once(insertCss.bind(null, css, { prepend: true }));
 
 module.exports = function modal(element) {
   return new Modal(element);
@@ -20,7 +19,7 @@ function Modal(element) {
   this.container = domify(html);
   this.container.appendChild(element);
   overlay.container.appendChild(this.container);
-  this.hideOverlayListener = bind(this, this.hide, true);
+  this.hideOverlayListener = this.hide.bind(this, true);
 }
 
 Emitter(Modal.prototype);

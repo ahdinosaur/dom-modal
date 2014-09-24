@@ -4,8 +4,9 @@
   "description": "Standalone modal for the browser, with overlay",
   "main": "index.js",
   "scripts": {
-    "test": "prova test.js -b -l phantom -q",
-    "example": "http-server . & watchify -dv -r ./index.js:dom-modal -o build.js"
+    "test": "prova test.js -b -l firefox -q -e",
+    "example": "http-server . & watchify -dv -r ./index.js:dom-modal -o build.js",
+    "dev": "prova test.js -b"
   },
   "repository": {
     "type": "git",
