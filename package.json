@@ -1,6 +1,6 @@
 {
   "name": "dom-modal",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Standalone modal for the browser, with overlay",
   "main": "index.js",
   "scripts": {
