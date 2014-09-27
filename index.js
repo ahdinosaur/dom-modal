@@ -1,9 +1,10 @@
-var fs = require('fs');
 var domify = require('domify');
-var once = require('once-component');
-var style = require('dom-style');
-var Emitter = require('component-emitter');
+var EventEmitter = require('events').EventEmitter;
+var fs = require('fs');
+var inherits = require('inherits');
 var insertCss = require('insert-css');
+var once = require('once');
+var style = require('dom-style');
 
 var overlay = require('./overlay.js');
 
@@ -22,9 +23,11 @@ function Modal(element) {
   this.hideOverlayListener = this.hide.bind(this, true);
 }
 
-Emitter(Modal.prototype);
+inherits(Modal, EventEmitter);
 
 Modal.prototype.show = function() {
+  EventEmitter(this);
+
   overlay.once('hide', this.hideOverlayListener);
   overlay.show();
   this.setup();
@@ -33,7 +36,7 @@ Modal.prototype.show = function() {
 }
 
 Modal.prototype.hide = function(askedByOverlay) {
-  overlay.off('hide', this.hideOverlayListener);
+  overlay.removeListener('hide', this.hideOverlayListener);
 
   if (askedByOverlay !== true) {
     overlay.hide();

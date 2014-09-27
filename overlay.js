@@ -1,10 +1,10 @@
-var emitter = require('component-emitter');
-var fs = require('fs');
 var domify = require('domify');
-var once = require('once-component');
-var style = require('dom-style');
-var Emitter = require('component-emitter');
+var EventEmitter = require('events').EventEmitter;
+var fs = require('fs');
+var inherits = require('inherits');
 var insertCss = require('insert-css');
+var once = require('once');
+var style = require('dom-style');
 
 var css = fs.readFileSync(__dirname + '/overlay.css', 'utf8');
 var html = fs.readFileSync(__dirname + '/overlay.html', 'utf8');
@@ -15,9 +15,10 @@ function Overlay() {
   this.container.addEventListener('click', this.hide.bind(this));
 }
 
-Emitter(Overlay.prototype);
+inherits(Overlay, EventEmitter);
 
 Overlay.prototype.show = function() {
+  EventEmitter(this);
   document.addEventListener('keydown', this.escKeyListener);
   this.setup();
   style(this.container, 'visibility', 'visible');
