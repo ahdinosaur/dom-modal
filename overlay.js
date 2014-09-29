@@ -12,7 +12,7 @@ var html = fs.readFileSync(__dirname + '/overlay.html', 'utf8');
 function Overlay() {
   this.container = domify(html);
   this.escKeyListener = this._checkEscKey.bind(this);
-  this.container.addEventListener('click', this.hide.bind(this));
+  this.container.addEventListener('mousedown', this.hide.bind(this));
 }
 
 inherits(Overlay, EventEmitter);
