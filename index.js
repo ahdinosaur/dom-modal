@@ -10,11 +10,11 @@ var overlay = require('./overlay.js');
 
 var css = fs.readFileSync(__dirname + '/modal.css', 'utf8');
 var html = fs.readFileSync(__dirname + '/modal.html', 'utf8');
-var addStyle = once(insertCss.bind(null, css, { prepend: true }));
+var addStyle = once(insertCss.bind(null, css, {prepend: true}));
 
 module.exports = function modal(element) {
   return new Modal(element);
-}
+};
 
 function Modal(element) {
   this.container = domify(html);
@@ -33,7 +33,7 @@ Modal.prototype.show = function() {
   this.setup();
   style(this.container, 'display', 'block');
   this.emit('show');
-}
+};
 
 Modal.prototype.hide = function(askedByOverlay) {
   overlay.removeListener('hide', this.hideOverlayListener);
@@ -44,7 +44,7 @@ Modal.prototype.hide = function(askedByOverlay) {
 
   style(this.container, 'display', 'none');
   this.emit('hide');
-}
+};
 
 Modal.prototype.setup = once(function() {
   addStyle();

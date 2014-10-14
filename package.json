@@ -4,7 +4,8 @@
   "description": "Standalone modal for the browser, with overlay",
   "main": "index.js",
   "scripts": {
-    "test": "prova test.js -b -l firefox -q -e",
+    "lint": "eslint index.js overlay.js test.js",
+    "test": "prova test.js -b -l firefox -q -e && npm run lint",
     "example": "http-server . & watchify -dv -r ./index.js:dom-modal -o build.js",
     "dev": "prova test.js -b"
   },
@@ -28,6 +29,7 @@
     "once": "^1.3.1"
   },
   "devDependencies": {
+    "eslint": "^0.8.2",
     "http-server": "^0.7.1",
     "phantomjs": "^1.9.9",
     "prova": "^1.14.2",

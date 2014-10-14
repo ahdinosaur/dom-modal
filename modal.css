@@ -1,10 +1,22 @@
 .dom-modal-modal {
-  display:none;
-
-  background: #ffffff;
+  background-color: #ffffff;
   margin: auto;
-  overflow: auto;
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
+}
+
+/* IE 10-11 hack to center div */
+/* hack reference:
+http://browserhacks.com/#hack-d19e53a0fdfba5ec0f283ae86175a3af */
+_:-ms-input-placeholder, :root .dom-modal-modal {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/* IE9 hack to center div */
+.dom-modal-ie9 .dom-modal-modal {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -ms-transform:translate(-50%, -50%);
 }

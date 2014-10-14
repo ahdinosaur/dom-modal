@@ -1,11 +1,11 @@
-var test = require('prova')
+var test = require('prova');
 
 test('dom-modal', function (t) {
   t.plan(2);
 
   var modal = require('./');
   var element = document.createElement('div');
-  element.innerHTML = 'Hello'
+  element.innerHTML = 'Hello';
   var myModal = modal(element);
 
   myModal.on('show', function() {

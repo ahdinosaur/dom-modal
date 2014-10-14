@@ -1,9 +1,8 @@
 .dom-modal-overlay {
-  background:rgba(0,0,0,.6);
+  background-color:rgba(0,0,0,.6);
   height: 100%;
   left: 0;
   display: flex;
-  overflow: auto;
   position: fixed;
   top: 0;
   width: 100%;

@@ -2,14 +2,15 @@
 
 Standalone modal for the browser.
 
-- easy to style
-- with overlay
-- overlay click = close
-- esc key = close
-- all-in-one JavaScript file
-- ~2.5kb minified gzipped
-- should work™ on IE9+
-- based on modules from [npm-dom](https://github.com/npm-dom)
+- CSS centered
+- No width or height needed. But it works if you provide them
+- Overlay included
+- Overlay click closes the modal
+- Esc key closes the modal
+- No external dependencies, all-in-one JavaScript file
+- ~3.5K minified gzipped
+- Easy to style
+- Works on IE9+
 
 ![screenshot](screenshot.png)
 
@@ -58,3 +59,5 @@ Just overwrite the styles you want.
 CSS techniques by:
 - [Sara Soueidan](https://twitter.com/SaraSoueidan): http://tympanus.net/codrops/2013/11/07/css-overlay-techniques/
 - [Scott O'Hara](https://twitter.com/scottohara): http://www.smashingmagazine.com/2014/09/15/making-modal-windows-better-for-everyone/
+
+And modified by me for IE11.
