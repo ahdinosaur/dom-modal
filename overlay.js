@@ -6,7 +6,7 @@ var insertCss = require('insert-css');
 var once = require('once');
 var style = require('dom-style');
 
-var css = fs.readFileSync(__dirname + '/overlay.css', 'utf8');
+insertCss(fs.readFileSync(__dirname + '/overlay.css', 'utf8'));
 var html = fs.readFileSync(__dirname + '/overlay.html', 'utf8');
 
 function Overlay() {
@@ -37,7 +37,6 @@ Overlay.prototype.hide = function(e) {
 };
 
 Overlay.prototype.setup = once(function() {
-  insertCss(css, {prepend: true});
   document.body.appendChild(this.dom);
 });
 
